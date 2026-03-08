@@ -3,59 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header class="header">
-  <div class="header__logo"></div>
-  <nav class="header__nav nav">
-    <ul class="nav__list">
-      <li class="nav__item"><a href="#" class="nav__link">Маршруты </a></li>
-      <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
-      <li class="nav__item"><a href="#" class="nav__link">Вопрос-Ответ</a></li>
-      <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-      <li class="nav__item"><a href="#" class="nav__link">Забронировать</a></li>
-    </ul>
-  </nav>
-  <div class="header__contact">
-    <div class="header__contact__tel">
-      <a href="tel:+79283332645">+7 928 333 26 45</a>
-    </div>
-    <button class="header__contact__btn">Перезвоните мне</button>
-  </div>
-</header>
 <main>
   <div class="main__container">
-    <section class="hero">
-      <h1 class="hero__title">
-        Экскурсии на квадроциклах в Геленджике
-      </h1>
-      <span class="hero__subtitle">
+    <div class="background-container">
+      <header class="header">
+        <div class="header__logo">
+          <a href="/" class="header__logo-link">
+            <img src="assets/img/logo.png" alt="">
+          </a>
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Маршруты </a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Вопрос-Ответ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--active">Забронировать</a></li>
+          </ul>
+        </nav>
+        <div class="header__contact">
+          <div class="header__contact__tel">
+            <svg class="header__contact__tel__icon" width="17" height="16">
+              <use xlink:href="assets/sprite.svg#phone"></use>
+            </svg>
+            <a href="tel:+79283332645" class="header__contact__tel__link">+7 928 333 26 45</a>
+          </div>
+          <button class="header__contact__btn">Перезвоните мне</button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <h1 class="hero__title">
+          Экскурсии на<br>квадроциклах<br>в Геленджике
+        </h1>
+        <span class="hero__subtitle">
         приезжайте за новыми ощущениями и эмоциями!
       </span>
-      <button class="hero__btn">
-        Подобрать маршрут
-      </button>
-    </section>
+        <button class="hero__btn">
+          <span>Подобрать маршрут</span>
+          <svg class="hero__btn__icon" width="31" height="31">
+            <use xlink:href="assets/sprite.svg#arrow_right_circle"></use>
+          </svg>
+        </button>
+      </section>
+    </div>
 
     <section class="advantages">
       <ul class="advantages__list">
         <li class="advantages__item advantage">
-          <div class="advantage__icon">
-          </div>
+            <svg class="advantage__icon__icon" width="58" height="45">
+              <use xlink:href="assets/sprite.svg#trees_circle"></use>
+            </svg>
           <h3 class="advantage__title">Увлекательные экскурсии</h3>
           <span class="advantage__text">Маршруты от лесных дорожек
 до полного бездорожья!</span>
         </li>
         <li class="advantages__item advantage">
           <div class="advantage__icon">
+            <svg class="advantage__icon__icon" width="61" height="45">
+              <use xlink:href="assets/sprite.svg#motorcycle_circle"></use>
+            </svg>
           </div>
           <h3 class="advantage__title">Надежная техника</h3>
           <span class="advantage__text">18 квадроциклов всех японских брендов</span>
         </li>
         <li class="advantages__item advantage">
           <div class="advantage__icon">
+            <svg class="advantage__icon__icon" width="57" height="45">
+              <use xlink:href="assets/sprite.svg#helmet_circle"></use>
+            </svg>
           </div>
           <h3 class="advantage__title">Экипировка бесплатно</h3>
           <span class="advantage__text">Необходимая экипировка
@@ -63,6 +85,9 @@
         </li>
         <li class="advantages__item advantage">
           <div class="advantages__icon">
+            <svg class="advantage__icon__icon" width="60" height="45">
+              <use xlink:href="assets/sprite.svg#user_circle"></use>
+            </svg>
           </div>
           <h3 class="advantage__title">Опытные инструктора</h3>
           <span class="advantage__text">Обеспечат полную безопасность Вашего отдыха</span>
@@ -74,131 +99,168 @@
       <h2 class="routes__title">
         Наши маршруты
       </h2>
-
-      <div class="base-route route">
-        <div class="route__info-container">
-          <h3 class="route__title">
-            Базовый
-          </h3>
-          <span class="route__price">
-          от 4000
-            <!--          Вставить иконку из спрайта -->
+      <div class="routes__list">
+        <div class="base-route route">
+          <div class="route__info-container">
+            <h3 class="route__title">
+              Базовый
+            </h3>
+            <span class="route__price">
+          от 4000 ₽
         </span>
-          <ul class="route__items">
-            <li class="route__item">
-              Время в пути: <span class="routes__item-strong">1,5 - 2 часа</span>
-            </li>
-            <li class="route__item">
-              Расстояние: <span class="routes__item-strong">20 - 25 км</span>
-            </li>
-            <li class="route__item">
-              Сложность: <span class="routes__item-strong">5***</span>
-            </li>
-          </ul>
+            <ul class="route__items">
+              <li class="route__item">
+                <svg class="time" width="17" height="17">
+                  <use xlink:href="assets/sprite.svg#time"></use>
+                </svg>
+                Время в пути: <span class="routes__item-strong">1,5 - 2 часа</span>
+              </li>
+              <li class="route__item">
+                <svg class="time" width="17" height="17">
+                  <use xlink:href="assets/sprite.svg#location"></use>
+                </svg>
+                Расстояние: <span class="routes__item-strong">20 - 25 км</span>
+              </li>
+              <li class="route__item">
+                <svg class="time" width="17" height="17">
+                  <use xlink:href="assets/sprite.svg#star"></use>
+                </svg>
+                Сложность: <span class="routes__item-strong">5***</span>
+              </li>
+            </ul>
 
-          <div class="route__map">
-            <h4 class="route__map__title">
-              Маршрут
-            </h4>
-            <span class="route__map__text">Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис -
--Грозовые Ворота - Шашлыки - Цыгельский водопад (чаша любви) -
--Форсаж</span>
+            <div class="route__map">
+              <div class="route__map__title__container">
+                <h4 class="route__map__title">
+                  Маршрут
+                </h4>
+                <svg class="time" width="24" height="24">
+                  <use xlink:href="assets/sprite.svg#route"></use>
+                </svg>
+              </div>
+              <span class="route__map__text">Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис
+- Грозовые Ворота - Шашлыки - Цыгельский водопад (чаша любви) - Форсаж
+              </span>
+            </div>
+
+            <div class="route__btns">
+              <button class="route__btn route__btn-white">Подробнее</button>
+              <button class="route__btn route__btn-cyan">Забронировать</button>
+            </div>
           </div>
 
-          <div class="route__btns">
-            <button class="route__btn route__btn-white">Подробнее</button>
-            <button class="route__btn route__btn-cyan">Забронировать</button>
+          <div class="route__slider-container">
+
           </div>
-        </div>
-
-        <div class="route__slider-container">
 
         </div>
-
-      </div>
-      <div class="advanced-route route">
-        <div class="route__info-container">
-          <h3 class="route__title">
-            Расширенный
-          </h3>
-          <span class="route__price">
-          от 16000
-            <!--          Вставить иконку из спрайта -->
+        <div class="advanced-route route">
+          <div class="route__info-container">
+            <h3 class="route__title">
+              Расширенный
+            </h3>
+            <span class="route__price">
+          от 16000 ₽
+              <!--          Вставить иконку из спрайта -->
         </span>
-          <ul class="route__items">
-            <li class="route__item">
-              Время в пути: <span class="routes__item-strong">6 - 8 часов</span>
-            </li>
-            <li class="route__item">
-              Расстояние: <span class="routes__item-strong">60 - 70 км</span>
-            </li>
-            <li class="route__item">
-              Сложность: <span class="routes__item-strong">5***</span>
-            </li>
-          </ul>
+            <ul class="route__items">
+              <li class="route__item">
+                <svg class="time" width="17" height="17">
+                  <use xlink:href="assets/sprite.svg#time"></use>
+                </svg>
+                Время в пути: <span class="routes__item-strong">6 - 8 часов</span>
+              </li>
+              <li class="route__item">
+                <svg class="time" width="17" height="17">
+                  <use xlink:href="assets/sprite.svg#location"></use>
+                </svg>
+                Расстояние: <span class="routes__item-strong">60 - 70 км</span>
+              </li>
+              <li class="route__item">
+                <svg class="time" width="17" height="17">
+                  <use xlink:href="assets/sprite.svg#star"></use>
+                </svg>
+                Сложность: <span class="routes__item-strong">5***</span>
+              </li>
+            </ul>
 
-          <div class="route__map">
-            <h4 class="route__map__title">
-              Маршрут
-            </h4>
-            <span class="route__map__text">Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис -
--Грозовые Ворота - Шашлыки - Цыгельский водопад (чаша любви) -
--Форсаж</span>
+            <div class="route__map">
+              <div class="route__map__title__container">
+                <h4 class="route__map__title">
+                  Маршрут
+                </h4>
+                <svg class="time" width="24" height="24">
+                  <use xlink:href="assets/sprite.svg#route"></use>
+                </svg>
+              </div>
+              <span class="route__map__text">Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис - Грозовые Ворота - Шашлыки - Цыгельский водопад (чаша любви) - Форсаж</span>
+            </div>
+
+            <div class="route__btns">
+              <button class="route__btn route__btn-white">Подробнее</button>
+              <button class="route__btn route__btn-cyan">Забронировать</button>
+            </div>
           </div>
 
-          <div class="route__btns">
-            <button class="route__btn route__btn-white">Подробнее</button>
-            <button class="route__btn route__btn-cyan">Забронировать</button>
+          <div class="route__slider-container">
+
           </div>
-        </div>
-
-        <div class="route__slider-container">
 
         </div>
-
-      </div>
-      <div class="base-route route">
-        <div class="route__info-container">
-          <h3 class="route__title">
-            Experience
-          </h3>
-          <span class="route__price">
-          от 7000
-            <!--          Вставить иконку из спрайта -->
+        <div class="base-route route">
+          <div class="route__info-container">
+            <h3 class="route__title">
+              Experience
+            </h3>
+            <span class="route__price">
+          от 7000 ₽
+              <!--          Вставить иконку из спрайта -->
         </span>
-          <ul class="route__items">
-            <li class="route__item">
-              Время в пути: <span class="routes__item-strong">4 часа</span>
-            </li>
-            <li class="route__item">
-              Расстояние: <span class="routes__item-strong">40 - 50 км</span>
-            </li>
-            <li class="route__item">
-              Сложность: <span class="routes__item-strong">5***</span>
-            </li>
-          </ul>
+            <ul class="route__items">
+              <li class="route__item">
+                <svg class="time" width="17" height="17">
+                  <use xlink:href="assets/sprite.svg#time"></use>
+                </svg>
+                Время в пути: <span class="routes__item-strong">4 часа</span>
+              </li>
+              <li class="route__item">
+                <svg class="time" width="17" height="17">
+                  <use xlink:href="assets/sprite.svg#location"></use>
+                </svg>
+                Расстояние: <span class="routes__item-strong">40 - 50 км</span>
+              </li>
+              <li class="route__item">
+                <svg class="time" width="17" height="17">
+                  <use xlink:href="assets/sprite.svg#star"></use>
+                </svg>
+                Сложность: <span class="routes__item-strong">5***</span>
+              </li>
+            </ul>
 
-          <div class="route__map">
-            <h4 class="route__map__title">
-              Маршрут
-            </h4>
-            <span class="route__map__text">Форсаж - Голубая бухта – Заброшенная Тур База – Сухогруз Рио –
-- Форсаж</span>
+            <div class="route__map">
+              <div class="route__map__title__container">
+                <h4 class="route__map__title">
+                  Маршрут
+                </h4>
+                <svg class="time" width="24" height="24">
+                  <use xlink:href="assets/sprite.svg#route"></use>
+                </svg>
+              </div>
+              <span class="route__map__text">Форсаж - Голубая бухта – Заброшенная Тур База – Сухогруз Рио – Форсаж</span>
+            </div>
+
+            <div class="route__btns">
+              <button class="route__btn route__btn-white">Подробнее</button>
+              <button class="route__btn route__btn-cyan">Забронировать</button>
+            </div>
           </div>
 
-          <div class="route__btns">
-            <button class="route__btn route__btn-white">Подробнее</button>
-            <button class="route__btn route__btn-cyan">Забронировать</button>
+          <div class="route__slider-container">
+
           </div>
-        </div>
-
-        <div class="route__slider-container">
 
         </div>
-
       </div>
-      <div class="advanced-route route"></div>
-      <div class="experience-route route"></div>
     </section>
 
     <section class="banner">
@@ -260,7 +322,7 @@
       </h2>
       <div class="conditions__container">
         <div class="conditions__item condition">
-<!--         иконка -->
+          <!--         иконка -->
           <span class="condition__text">
             При прокате или аренде строго соблюдать правила техники безопасности и все требования инструктора!
           </span>
@@ -362,7 +424,7 @@
             Катание на квадроциклах
           </span>
           <span class="gift-certificate__banner-info">Маршрут: Лесная прогулка</span>
-<!--          вставить иконку-->
+          <!--          вставить иконку-->
         </div>
       </div>
     </section>
@@ -411,7 +473,7 @@
 
         </div>
         <div class="answers__form">
-<!--          icon-->
+          <!--          icon-->
           <span class="answers__form__title">
 Есть вопросы?
           </span>
@@ -434,19 +496,19 @@
         <div class="contacts__container__left">
           <div class="contacts__list">
             <div class="contacts__item contact">
-<!--              icon-->
+              <!--              icon-->
               <span class="contact__text">Город Геленджик</span>
             </div>
             <div class="contacts__item contact">
-<!--              icon-->
+              <!--              icon-->
               <span class="contact__text">experience@groupgrand.ru</span>
             </div>
             <div class="contacts__item contact">
-<!--              icon-->
+              <!--              icon-->
               <span class="contact__text">+7 928 428-00-62</span>
             </div>
             <div class="contacts__item contact">
-<!--              icon-->
+              <!--              icon-->
               <span class="contact__text">Пн - Пт: 9:00 - 18:00<br>
 Сб: 9:00 - 17:00<br>
 Вс - выходной</span>
