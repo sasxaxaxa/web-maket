@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Routes</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -57,9 +57,9 @@
     <section class="advantages">
       <ul class="advantages__list">
         <li class="advantages__item advantage">
-            <svg class="advantage__icon__icon" width="58" height="45">
-              <use xlink:href="assets/sprite.svg#trees_circle"></use>
-            </svg>
+          <svg class="advantage__icon__icon" width="58" height="45">
+            <use xlink:href="assets/sprite.svg#trees_circle"></use>
+          </svg>
           <h3 class="advantage__title">Увлекательные экскурсии</h3>
           <span class="advantage__text">Маршруты от лесных дорожек
 до полного бездорожья!</span>
@@ -149,12 +149,48 @@
             </div>
           </div>
 
-          <div class="route__slider-container">
+          <div class="route__slider swiper">
+            <div class="swiper-wrapper">
 
+              <div class="swiper-slide">
+                <img src="assets/img/img1.png" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/img2.png" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/img3.png" alt="">
+              </div>
+
+            </div>
+
+            <div class="route__pagination swiper-pagination"></div>
           </div>
 
         </div>
         <div class="advanced-route route">
+          <div class="route__slider swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <img src="assets/img/img1.png" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/img2.png" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/img3.png" alt="">
+              </div>
+
+            </div>
+
+            <div class="route__pagination swiper-pagination"></div>
+          </div>
+
           <div class="route__info-container">
             <h3 class="route__title">
               Расширенный
@@ -201,12 +237,9 @@
               <button class="route__btn route__btn-cyan">Забронировать</button>
             </div>
           </div>
-
-          <div class="route__slider-container">
-
-          </div>
-
         </div>
+
+
         <div class="base-route route">
           <div class="route__info-container">
             <h3 class="route__title">
@@ -246,7 +279,8 @@
                   <use xlink:href="assets/sprite.svg#route"></use>
                 </svg>
               </div>
-              <span class="route__map__text">Форсаж - Голубая бухта – Заброшенная Тур База – Сухогруз Рио – Форсаж</span>
+              <span
+                class="route__map__text">Форсаж - Голубая бухта – Заброшенная Тур База – Сухогруз Рио – Форсаж</span>
             </div>
 
             <div class="route__btns">
@@ -255,8 +289,24 @@
             </div>
           </div>
 
-          <div class="route__slider-container">
+          <div class="route__slider swiper">
+            <div class="swiper-wrapper">
 
+              <div class="swiper-slide">
+                <img src="assets/img/img1.png" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/img2.png" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/img3.png" alt="">
+              </div>
+
+            </div>
+
+            <div class="route__pagination swiper-pagination"></div>
           </div>
 
         </div>
@@ -557,5 +607,9 @@
     © CFMOTO Experience Kuban. Внедорожный полигон CFMOTO и прокат квадроциклов в Геленджике
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
