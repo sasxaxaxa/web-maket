@@ -16,7 +16,6 @@ sliders.forEach((slider, index) => {
       init: updateSlides,
       slideChange: updateSlides
     }
-
   });
 
   function updateSlides(swiper) {
@@ -26,7 +25,6 @@ sliders.forEach((slider, index) => {
 
     slides.forEach((slide, i) => {
 
-      // base-route → скрываем левые
       if (!isAdvanced) {
         if (i < activeIndex) {
           slide.style.opacity = "0";
@@ -37,7 +35,6 @@ sliders.forEach((slider, index) => {
         }
       }
 
-      // advanced-route → скрываем правые
       else {
         if (i > activeIndex) {
           slide.style.opacity = "0";
@@ -47,11 +44,8 @@ sliders.forEach((slider, index) => {
           slide.style.pointerEvents = "auto";
         }
       }
-
     });
-
   }
-
 });
 
 const accordionItems = document.querySelectorAll('.accordion-item');
