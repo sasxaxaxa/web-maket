@@ -1,4 +1,4 @@
-@import "./fonts.css";
+@import "fonts.css";
 
 :root {
   --font-family: 'Montserrat', serif;
@@ -24,7 +24,7 @@ body {
 }
 
 .background-container {
-  background-image: url('assets/img/background-hero.jpg');
+  background-image: url('../assets/img/background-hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -607,7 +607,7 @@ Offers
 }
 
 .offer {
-  background-image: url('assets/img/background-offer.jpg') ;
+  background-image: url('../assets/img/background-offer.jpg') ;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -733,7 +733,7 @@ Gift Certificate
 }
 
 .gift-certificate__banner {
-  background-image: url("assets/img/background-gift.jpg");
+  background-image: url("../assets/img/background-gift.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
