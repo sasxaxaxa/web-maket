@@ -725,7 +725,7 @@ Gift Certificate
   font-weight: 900;
   font-size: 48px;
   line-height: 130%;
-  color: #121214;
+  color: var(--color-black);
   text-transform: uppercase;
   padding-left: 82px;
 }
@@ -778,6 +778,7 @@ Answers
   padding-top: 71px;
   padding-bottom: 317px;
   padding-inline: 182px;
+  height: 843px;
 }
 
 .answers__title {
@@ -791,7 +792,7 @@ Answers
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 159px;
-
+  margin-top: 48px;
 }
 
 .answers__accordion {
@@ -800,10 +801,8 @@ Answers
   gap: 15px;
 }
 
-/* item */
-
 .accordion-item {
-  border: 0.5px solid transparent;
+  border: 1px solid #848484;
   border-radius: 2px;
   width: 539px;
   height: 55px;
@@ -812,14 +811,10 @@ Answers
   cursor: pointer;
 }
 
-/* открытый */
-
 .accordion-item--active {
-  border: 0.5px solid #037e8c;
+  border: 1px solid var(--color-cyan);
   height: 167px;
 }
-
-/* header */
 
 .accordion-header {
   height: 55px;
@@ -829,14 +824,10 @@ Answers
   padding-inline: 20px;
 }
 
-/* текст */
-
 .accordion-title {
   font-size: 16px;
   font-weight: 600;
 }
-
-/* контент */
 
 .accordion-content {
   padding: 0 20px 20px 20px;
@@ -844,29 +835,166 @@ Answers
   line-height: 160%;
 }
 
-/* иконка */
-
-/* поворот стрелки */
-
 .accordion-icon {
   width: 12px;
   height: 22px;
-  flex-shrink: 0; /* чтобы не сжималась */
+  flex-shrink: 0;
   transition: transform 0.3s ease;
+  color: var(--color-black);
 }
 
-/* SVG внутри иконки */
 .accordion-icon use {
   width: 100%;
   height: 100%;
 }
 
-/* Если SVG не масштабируется, добавьте preserveAspectRatio */
 .accordion-icon svg {
   width: 100%;
   height: 100%;
 }
 
 .accordion-item--active .accordion-icon {
-  transform: rotate(90deg); /* или rotate(180deg) в зависимости от нужного направления */
+  transform: rotate(-90deg);
+  color: var(--color-cyan);
+}
+
+.answers__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3px;
+  gap: 14px;
+  color: var(--color-black);
+}
+
+.answers__form__title {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.answers__form__text {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+
+.answers__form__btn {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--color-white);
+  background-color: var(--color-cyan);
+  padding-block: 14px;
+  padding-inline: 33px;
+  border-radius: var(--border-radius);
+  margin-top: 17px;
+}
+
+/*
+Contacts
+ */
+
+.contacts {
+  margin-left: 70px;
+  margin-bottom: 74px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.contacts__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 140%;
+  border-top: 3px solid var(--color-cyan);
+  padding-top: 15px;
+}
+
+.contacts__container__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 60px;
+  row-gap: 45px;
+  margin-top: 64px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.contact__text {
+  padding-top: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 151%;
+}
+
+.contacts__soc1als__container {
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  margin-top: 16px;
+}
+
+.contacts__soc1als__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 151%;
+}
+
+/*
+Footer
+ */
+
+.footer {
+  margin-inline: 70px;
+}
+
+.footer__links {
+  border-top: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+
+  display: flex;
+  flex-direction: row;
+  padding-left: 112px;
+  padding-block: 3px;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 63px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.footer__nav__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 105%;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.footer__logo__img {
+  width: 65px;
+  height: 83px;
+}
+
+.footer__copyright {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 127%;
+  color: #787878;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 21px;
 }

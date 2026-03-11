@@ -594,7 +594,9 @@
 
         </div>
         <div class="answers__form">
-          <!--          icon-->
+          <svg class="answers__chat" width="94" height="94">
+            <use xlink:href="assets/sprite.svg#chat"></use>
+          </svg>
           <span class="answers__form__title">
 Есть вопросы?
           </span>
@@ -611,25 +613,34 @@
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
 
       <div class="contacts__container">
         <div class="contacts__container__left">
+          <h2 class="contacts__title">Контакты</h2>
+
           <div class="contacts__list">
             <div class="contacts__item contact">
-              <!--              icon-->
+              <svg class="contact__icon" width="45" height="45">
+                <use xlink:href="assets/sprite.svg#home_circle"></use>
+              </svg>
               <span class="contact__text">Город Геленджик</span>
             </div>
             <div class="contacts__item contact">
-              <!--              icon-->
-              <span class="contact__text">experience@groupgrand.ru</span>
-            </div>
-            <div class="contacts__item contact">
-              <!--              icon-->
+              <svg class="contact__icon" width="45" height="45">
+                <use xlink:href="assets/sprite.svg#phone_circle"></use>
+              </svg>
               <span class="contact__text">+7 928 428-00-62</span>
             </div>
             <div class="contacts__item contact">
-              <!--              icon-->
+              <svg class="contact__icon" width="45" height="45">
+                <use xlink:href="assets/sprite.svg#message_circle"></use>
+              </svg>
+              <span class="contact__text">experience@groupgrand.ru</span>
+            </div>
+            <div class="contacts__item contact">
+              <svg class="contact__icon" width="45" height="45">
+                <use xlink:href="assets/sprite.svg#time_circle"></use>
+              </svg>
               <span class="contact__text">Пн - Пт: 9:00 - 18:00<br>
 Сб: 9:00 - 17:00<br>
 Вс - выходной</span>
@@ -637,13 +648,23 @@
           </div>
           <div class="contacts__soc1als">
             <h3 class="contacts__soc1als__title">Написать нам:</h3>
-            <div class=""></div>
-            <div class=""></div>
+            <div class="contacts__soc1als__container">
+              <a href="#" class="contacts__soc1als__link">
+                <svg class="contacts__soc1als__icon" width="41" height="41">
+                  <use xlink:href="assets/sprite.svg#whatsapp"></use>
+                </svg>
+              </a>
+              <a href="#" class="contacts__soc1als__link">
+                <svg class="contacts__soc1als__icon" width="41" height="41">
+                  <use xlink:href="assets/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="contacts__container__right map">
-
-        </div>
+      </div>
+      <div class="contacts__right map">
+        <img class="map__img" src="/assets/img/map.png" alt="">
       </div>
     </section>
 
@@ -651,25 +672,39 @@
 </main>
 <footer class="footer">
   <div class="footer__links">
-    <a class="footer__logo" href="/"></a>
+    <a class="footer__logo" href="/">
+      <img class="footer__logo__img" src="/assets/img/logo.png" alt="">
+    </a>
     <ul class="footer__nav">
       <li class="footer__nav-item">
-        Маршруты
+        <a class="footer__nav__link" href="#">
+          Маршруты
+        </a>
       </li>
       <li class="footer__nav-item">
-        Галерея
+        <a class="footer__nav__link" href="#">
+          Галерея
+        </a>
       </li>
       <li class="footer__nav-item">
-        Вопрос-Ответ
+        <a class="footer__nav__link" href="#">
+          Вопрос-Ответ
+        </a>
       </li>
       <li class="footer__nav-item">
-        Контакты
+        <a class="footer__nav__link" href="#">
+          Контакты
+        </a>
       </li>
       <li class="footer__nav-item">
-        Условия
+        <a class="footer__nav__link" href="#">
+          Условия
+        </a>
       </li>
       <li class="footer__nav-item">
-        Спецпредложения
+        <a class="footer__nav__link" href="#">
+          Спецпредложения
+        </a>
       </li>
     </ul>
   </div>
