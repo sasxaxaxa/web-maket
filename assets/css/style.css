@@ -363,6 +363,7 @@ Routes
   width: 640px;
   height: 360px;
   overflow: visible;
+  position: absolute;
 }
 
 .swiper {
@@ -397,10 +398,17 @@ Routes
 }
 
 .route__pagination {
+  position: absolute;
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 18px;
+  top: 50%;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 150% !important;
+  left: 113% !important;
 }
 
 .route__pagination .swiper-pagination-bullet {

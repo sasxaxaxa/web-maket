@@ -2,6 +2,8 @@ const sliders = document.querySelectorAll('.route__slider');
 
 sliders.forEach((slider, index) => {
 
+  const isAdvanced = slider.closest('.advanced-route');
+
   new Swiper(slider, {
 
     slidesPerView: "auto",
@@ -10,28 +12,44 @@ sliders.forEach((slider, index) => {
 
     initialSlide: index === 1 ? 2 : 0,
 
-    pagination: {
-      el: slider.querySelector('.swiper-pagination'),
-      clickable: true
-    },
     on: {
-      init: hideLeftSlides,
-      slideChange: hideLeftSlides
+      init: updateSlides,
+      slideChange: updateSlides
     }
 
   });
-  function hideLeftSlides(swiper) {
+
+  function updateSlides(swiper) {
+
     const slides = swiper.slides;
     const activeIndex = swiper.activeIndex;
 
-    slides.forEach((slide, index) => {
-      if (index < activeIndex) {
-        slide.style.opacity = "0";
-        slide.style.pointerEvents = "none";
-      } else {
-        slide.style.opacity = "1";
+    slides.forEach((slide, i) => {
+
+      // base-route → скрываем левые
+      if (!isAdvanced) {
+        if (i < activeIndex) {
+          slide.style.opacity = "0";
+          slide.style.pointerEvents = "none";
+        } else {
+          slide.style.opacity = "1";
+          slide.style.pointerEvents = "auto";
+        }
       }
+
+      // advanced-route → скрываем правые
+      else {
+        if (i > activeIndex) {
+          slide.style.opacity = "0";
+          slide.style.pointerEvents = "none";
+        } else {
+          slide.style.opacity = "1";
+          slide.style.pointerEvents = "auto";
+        }
+      }
+
     });
+
   }
 
 });
