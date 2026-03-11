@@ -8,14 +8,31 @@ sliders.forEach((slider, index) => {
     spaceBetween: 20,
     centeredSlides: true,
 
-    initialSlide: index === 1 ? 2 : 0, // второй блок открывается с 3 картинки
+    initialSlide: index === 1 ? 2 : 0,
 
     pagination: {
       el: slider.querySelector('.swiper-pagination'),
       clickable: true
+    },
+    on: {
+      init: hideLeftSlides,
+      slideChange: hideLeftSlides
     }
 
   });
+  function hideLeftSlides(swiper) {
+    const slides = swiper.slides;
+    const activeIndex = swiper.activeIndex;
+
+    slides.forEach((slide, index) => {
+      if (index < activeIndex) {
+        slide.style.opacity = "0";
+        slide.style.pointerEvents = "none";
+      } else {
+        slide.style.opacity = "1";
+      }
+    });
+  }
 
 });
 
@@ -27,12 +44,10 @@ accordionItems.forEach(item => {
   header.addEventListener('click', () => {
     const isOpen = item.classList.contains('accordion-item--active');
 
-    // Закрываем все
     accordionItems.forEach(el => {
       el.classList.remove('accordion-item--active');
     });
 
-    // Открываем текущий, если он был закрыт
     if (!isOpen) {
       item.classList.add('accordion-item--active');
     }

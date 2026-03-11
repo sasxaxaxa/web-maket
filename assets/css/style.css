@@ -304,6 +304,8 @@ Routes
 .route__info-container {
   max-width: 544px;
   min-height: 360px;
+  position: relative;
+  padding-left: 81px;
 }
 
 .route__slider img {
@@ -317,15 +319,19 @@ Routes
   margin-top: 10px;
 }
 
-.route {
-  display: flex;
-  justify-content: space-between;
+.base-route {
+  display: grid;
+  grid-template-columns: 544px 640px;
   align-items: center;
-  gap: 40px;
+  column-gap: 30px;
+  margin-left: 70px;
 }
 
-.base-route {
-  padding-left: 70px;
+.advanced-route {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 40px;
 }
 
 .advanced-route {
@@ -354,16 +360,25 @@ Routes
 }
 
 .route__slider {
-  margin-left: 30px;
+  width: 640px;
   height: 360px;
-  display: flex;
-  align-items: center;
+  overflow: visible;
+}
+
+.swiper {
+  overflow: visible !important;
 }
 
 .route__slider .swiper-slide {
   width: 249px;
   height: 299px;
+  flex-shrink: 0;
   transition: all 0.4s ease;
+}
+
+.route__slider .swiper-slide-active {
+  width: 359px;
+  height: 359px;
 }
 
 .route__slider .swiper-slide img {
@@ -373,9 +388,12 @@ Routes
   border-radius: 16px;
 }
 
-.route__slider .swiper-slide-active {
-  width: 359px;
-  height: 359px;
+.base-route .swiper {
+  margin-left: 0 !important;
+}
+
+.advanced-route .swiper {
+  margin-right: 0 !important;
 }
 
 .route__pagination {
